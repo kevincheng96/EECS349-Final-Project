@@ -13,6 +13,11 @@ body {
     padding-bottom: 40px;
 }
 
+#graph {
+    max-width: 700px;
+    max-height: 600px;
+}
+
 .header-image {
     display: block;
     width: 100%;
@@ -191,4 +196,8 @@ footer {
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(1.1);
+}
+
+.lead {
+    font-size: 18px;
 }

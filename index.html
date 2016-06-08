@@ -52,6 +52,9 @@
                     <li>
                         <a href="#solution" class="hvr-grow">Solution</a>
                     </li>
+                     <li>
+                        <a href="#data" class="hvr-grow">Our Dataset</a>
+                    </li>
                     <li>
                         <a href="#training" class="hvr-grow">Training & Testing</a>
                     </li>
@@ -98,27 +101,41 @@
 
         <!-- Second Featurette -->
         <div class="featurette" id="solution">
-            <img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/500x500">
             <h2 class="featurette-heading">Our Solution</h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead">We approached this problem by putting our dataset through four learners: MLP neural nets, nearest neighbor, J48 decision tree, and Bayes net. The dataset, which is described fully in the following section, consisted of a total of 9 features: the number of views (adjusted for number of days ahead of movie release the trailer is released), times shared, like:dislike ratio, movie genre, number of theaters showing the movie, and the opening box office revenue. </p>
+        </div>
+
+
+        <hr class="featurette-divider">
+
+        <!-- Third Featurette -->
+        <div class="featurette" id="data">
+            <h2 class="featurette-heading">Our Dataset</h2>
+            <p class="lead">Our data set consists of data from about 300 different movie trailers between the years 2010 and 2016, independently gathered from one Youtube channel Movieclips Trailers to reduce the amount of viewer bias that occurs between popular and unpopular channels. We kept the movies recent (after 2010) because as the Internet grows, more and more people are using Youtube for movie trailers, which might potentially skew the number of viewers towards newer movies.
+            <br></br>
+            The data set has a total of 9 attributes. These attributes are: the number of views (adjusted for number of days ahead of movie release the trailer is released), times shared, like:dislike ratio, movie genre, number of theaters showing the movie, and the opening box office revenue.
+            <br></br>
+            We wrote a script to assist in the collection of this data; it takes in a movie trailer url and returns the number of trailer views prior to movie release date, ratio of likes to dislikes, and the number of times the trailer was shared. Then, we manually filled in the genre of each movie, the number of theaters the movie was released in, and the opening week box office revenue with the assistance of the website <a href="http://www.boxofficemojo.com">www.boxofficemojo.com </a>
+            </p>
         </div>
 
         <hr class="featurette-divider">
 
         <!-- Third Featurette -->
         <div class="featurette" id="training">
-            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
             <h2 class="featurette-heading">Training & Testing</h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <p class="lead">Our initial 10-fold cross-validation results are shown in the following table: </p>
+            <img id="graph" src="img/testingtable.png">
+            <p class="lead">By comparing the classification accuracies of the discretized dataset to the correlation coefficients of the non-discretized dataset (both are bolded in the table), we determined that the discretized data produced better results. As a result, we decided to focus on trying to optimize the accuracy for discretized data for the rest of the project.</p>
         </div>
 
         <hr class="featurette-divider">
 
         <!-- Fourth Featurette -->
         <div class="featurette" id="results">
-            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
             <h2 class="featurette-heading">Results</h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <img id="graph" src="img/graph.png">
+            <p class="lead">Graph displaying the predicted discretized revenues vs the actual discretized revenues when putting the dataset through a MLP neural net.</p>
         </div>
 
         <hr class="featurette-divider">
