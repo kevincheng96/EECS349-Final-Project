@@ -201,3 +201,11 @@ footer {
 .lead {
     font-size: 18px;
 }
+
+.caption {
+    font-size: 15px;
+}
+
+.team {
+    margin-bottom: 0px;
+}
