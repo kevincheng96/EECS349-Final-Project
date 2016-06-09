@@ -86,8 +86,9 @@
                 </strong></h3>
                 <h3>Final project for Northwestern University EECS 349</h3>
                 <br></br>
-                <button type="button" class="btn btn-primary-outline btn-lg hvr-grow">Download our report
-                    <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                <button type="button" class="btn btn-primary-outline btn-lg hvr-grow">
+                    <a href="./downloads/report.pdf">Download our report <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                    </a>
                 </button>
             </div>
         </div>
@@ -133,7 +134,7 @@
         <div class="featurette" id="training">
             <h2 class="featurette-heading">Training & Testing</h2>
             <p class="lead">Our initial 10-fold cross-validation results are shown in the following table: </p>
-            <img id="graph" src="img/testingtable.png">
+            <img class="graph" src="img/testingtable.png"></img>
             <p class="lead">By comparing the classification accuracies of the discretized dataset to the correlation coefficients of the non-discretized dataset (both are bolded in the table), we determined that the discretized data produced better results. As a result, we decided to focus on trying to optimize the accuracy for discretized data for the rest of the project.</p>
         </div>
 
@@ -142,8 +143,11 @@
         <!-- Fourth Featurette -->
         <div class="featurette" id="results">
             <h2 class="featurette-heading">Results</h2>
-            <img id="graph" src="img/graph.png">
-            <p class="caption"><i>Graph displaying the predicted discretized revenues vs the actual discretized revenues when putting the dataset through a MLP neural net. The x axis is the actual revenues and the y axis is the predicted revenues.</i> </p>
+            <img class="table" src="img/table.png"></img>
+            <p class="caption"><i>Table displaying the final cross-validation classification accuracies for each of the learning models</i></p>
+            <p class="lead">As can be seen from the table, MLP performed the best on our data set. As such, the following graph displays our classification errors using the MLP learner.</p>
+            <img class="graph" src="img/graph.png"></img>
+            <p class="caption"><i>Graph displaying the predicted discretized revenues vs the actual discretized revenues when putting the dataset through a MLP neural net. The x axis is the actual revenues and the y axis is the predicted revenues.</i></p>
             <p class="lead">
             As the above graph indicates, the linearity of the data points suggests fairly accurate predictions for discretized movie revenues through the use of multilayer perceptrons in neural networks, which achieved a validation accuracy of almost 80% (for more detailed information on specific accuracies, refer to the final report). More specifically, our neural nets indicated that the number of times a movie trailer was shared on Youtube had the highest weight in predicting revenue results, followed by the number of likes.
             </p>
